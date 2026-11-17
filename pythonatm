@@ -1,0 +1,30 @@
+balance=300000
+pin=1701
+newpin=int(input("Enter a number:"))
+if pin==newpin:
+    print("Welcome to ATM")
+    print("1.check balance:")
+    print("2.credited:")
+    print("3.deposit:")
+    print("4.Exit:")
+    choice=int(input("Enter a choice:"))
+    if choice==1:
+        print("Your balance is:",balance)
+    elif choice==2:
+        amount=int(input("Enter a amount:"))
+        if amount>500 and amount<=balance:
+            balance=balance-amount
+            print("credited succesfully")
+            print("your balance is:",balance)
+        else:
+            print("minimum 500")
+    elif  choice==3:
+        amount=int(input("Enter a amount:"))
+        if amount<100000 and amount<=balance:
+            balance=balance+amount
+            print("deposit succesfully")
+            print("your balance is:",balance)
+        else:
+            print("max 100000")
+    elif choice==4:
+        print("Thank you")
